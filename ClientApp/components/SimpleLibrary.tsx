@@ -65,7 +65,8 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
                 <h2>Author</h2>
                 <AuthorComponent Author={a_bs.author} />
                 <h4>Books</h4>
-                {a_bs.books
+                
+                {a_bs.books.filter(book => this.state.FilterBookString != "" ? book.title.toLowerCase().includes(this.state.FilterBookString) : true)
                   //TODO 12: missing code 0.5pt
                   //.map kan je zien als ( for each in ....)
                   //hover over .map for explanation
