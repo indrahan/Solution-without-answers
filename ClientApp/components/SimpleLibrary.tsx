@@ -70,7 +70,9 @@ export class SimpleLibraryComponent extends React.Component<RouteComponentProps<
                   //TODO 12: missing code 0.5pt
                   //.map kan je zien als ( for each in ....)
                   //hover over .map for explanation
-                  .map(book => <div>{ book.title }</div>)
+                  .map(book => <div>
+                    <BookComponent Book={book}/>
+                    </div>)
                 }
 
               </div>)}
